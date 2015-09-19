@@ -42,7 +42,7 @@ describe('Emotion', function(){
     });
 
     it('Return number of sad words', function(){
-      expect(emotion._sadSearch('I am delighted it is a pleasant day and not miserable')).toBe(2);
+      expect(emotion._sadSearch('I am delighted it is a pleasant day and not miserable')).toBe(1);
     });
 
   });

@@ -27,6 +27,15 @@ Emotion.prototype._sadWords = function(){
   return ['disappointed', 'miserable', 'sad', 'sorrow', 'unhappy'];
 };
 
-Emotion.prototype._sadSearch = function(){
-  
+Emotion.prototype._sadSearch = function(sentence){
+  var sadArray = [];
+  var stringArray = sentence.split(' ');
+  for(var i = 0; i < this._sadWords().length; i++){
+    for(var j = 0; j < stringArray.length; j++){
+      if(this._sadWords()[i] === stringArray[j]){
+        sadArray.push(this._sadWords()[i]);
+      }
+    }
+  }
+  return sadArray.length
 };
