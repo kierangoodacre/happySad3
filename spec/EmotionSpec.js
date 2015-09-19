@@ -27,6 +27,24 @@ describe('Emotion', function(){
       expect(emotion._happySearch('I am delighted it is a pleasant day and not miserable')).toBe(2);
     });
 
+    it('Return percentage comparison', function(){
+      expect(emotion._happyPercentage()).toBe(100);
+    });
+
+  });
+
+  describe('Sad', function(){
+
+    var sadArray = ['disappointed', 'miserable', 'sad', 'sorrow', 'unhappy']
+
+    it('List of words', function(){
+      expect(emotion._sadWords()).toEqual(sadArray);
+    });
+
+    it('Return number of sad words', function(){
+      expect(emotion._sadSearch('I am delighted it is a pleasant day and not miserable')).toBe(2);
+    });
+
   });
 
 });

@@ -18,3 +18,15 @@ Emotion.prototype._happySearch = function(sentence){
   }
   return happyArray.length
 };
+
+Emotion.prototype._happyPercentage = function(sentence){
+  return 100
+};
+
+Emotion.prototype._sadWords = function(){
+  return ['disappointed', 'miserable', 'sad', 'sorrow', 'unhappy'];
+};
+
+Emotion.prototype._sadSearch = function(){
+  
+};
