@@ -11,7 +11,7 @@ Emotion.prototype.userInput = function(sentence){
 Emotion.prototype._happySadComparison = function(sentence){
   if(this._happyPercentage(sentence) >= 50){
     this.response = "Happy"
-  } else if (this._sadPercentage >= 50){
+  } else if (this._sadPercentage(sentence) >= 50){
     this.response = "Sad"
   } else {
     this.response = "Unknown"
