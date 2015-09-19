@@ -20,7 +20,7 @@ Emotion.prototype._happySearch = function(sentence){
 };
 
 Emotion.prototype._happyPercentage = function(sentence){
-  return 100
+  return (((this._happySearch(sentence)/this._sadSearch(sentence)) - 1) * 100)
 };
 
 Emotion.prototype._sadWords = function(){
@@ -38,4 +38,8 @@ Emotion.prototype._sadSearch = function(sentence){
     }
   }
   return sadArray.length
+};
+
+Emotion.prototype._sadPercentage = function(sentence){
+  return (((this._sadSearch(sentence)/this._happySearch(sentence)) - 1) * 100);
 };

@@ -28,7 +28,7 @@ describe('Emotion', function(){
     });
 
     it('Return percentage comparison', function(){
-      expect(emotion._happyPercentage()).toBe(100);
+      expect(emotion._happyPercentage('I am delighted it is a pleasant day and not miserable')).toBe(100);
     });
 
   });
@@ -43,6 +43,10 @@ describe('Emotion', function(){
 
     it('Return number of sad words', function(){
       expect(emotion._sadSearch('I am delighted it is a pleasant day and not miserable')).toBe(1);
+    });
+
+    it('Return a percentage comparison', function(){
+      expect(emotion._sadPercentage('I am delighted it is a pleasant day and not miserable')).toBe(-50);
     });
 
   });
