@@ -2,6 +2,22 @@ var Emotion = function(){
   this.response = "Unknown";
 };
 
+Emotion.prototype.userInput = function(sentence){
+  return this._happySadComparison(sentence);
+};
+
+// Private Methods
+
+Emotion.prototype._happySadComparison = function(sentence){
+  if(this._happyPercentage(sentence) >= 50){
+    this.response = "Happy"
+  } else if (this._sadPercentage >= 50){
+    this.response = "Sad"
+  } else {
+    this.response = "Unknown"
+  }
+};
+
 Emotion.prototype._happyWords = function(){
   return ['delight', 'delighted', 'delightful', 'happy', 'glad', 'joy', 'joyful', 'merry', 'pleasant'];
 };

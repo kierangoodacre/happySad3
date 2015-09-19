@@ -51,4 +51,13 @@ describe('Emotion', function(){
 
   });
 
+  describe('Emotion Comparison', function(){
+
+    it('Response Happy if number is 50% more than Sad', function(){
+      emotion.userInput('I am delighted it is a pleasant day and not miserable')
+      expect(emotion.response).toBe('Happy');
+    });
+
+  });
+
 });
